@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @practice_locale.name
+%p
+  %b Address:
+  = @practice_locale.address_id
+
+= link_to 'Edit', edit_practice_locale_path(@practice_locale)
+\|
+= link_to 'Back', practice_locales_path

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
@@ -16,6 +15,13 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'bootstrap', '~> 4.0.0.alpha4'
+
+gem 'devise'
+gem 'simple_form'
+gem 'thor', '0.19.1'
+
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -27,12 +33,23 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'haml-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'faker'
+  gem 'faker-stoked'
+
+  gem 'minitest-rails'
+
+  gem 'factory_girl_rails'
+
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'guard-livereload'
 end
 
 group :development do
@@ -44,5 +61,27 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+
+group :test do
+
+  gem 'minitest-rails-capybara'
+  gem 'capybara-email'
+
+  gem 'selenium-webdriver'
+  gem 'minitest-given'
+
+  # mocks & stubs
+  gem 'mocha'
+
+  # for save_and_open_page method in capybara to work
+  gem 'launchy'
+
+  # clean out database between runs
+  gem 'database_cleaner'
+
+  # nyan cat, motherfuckers:
+  gem 'minitest-nyan-cat'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

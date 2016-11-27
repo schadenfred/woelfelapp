@@ -1,0 +1,1 @@
+json.partial! "practice_locales/practice_locale", practice_locale: @practice_locale

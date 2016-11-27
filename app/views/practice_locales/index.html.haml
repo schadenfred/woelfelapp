@@ -1,0 +1,23 @@
+%h1 Listing practice_locales
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th
+      %th
+      %th
+
+  %tbody
+    - @practice_locales.each do |practice_locale|
+      %tr
+        %td= practice_locale.name
+        %td= practice_locale.address_id
+        %td= link_to 'Show', practice_locale
+        %td= link_to 'Edit', edit_practice_locale_path(practice_locale)
+        %td= link_to 'Destroy', practice_locale, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Practice locale', new_practice_locale_path

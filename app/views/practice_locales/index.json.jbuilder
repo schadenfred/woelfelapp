@@ -1,0 +1,1 @@
+json.array! @practice_locales, partial: 'practice_locales/practice_locale', as: :practice_locale

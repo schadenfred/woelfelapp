@@ -1,0 +1,530 @@
+!!!
+%html{:lang => "en-US"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}/
+    %title IsisOne - Personal or Agency Portfolio
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "Dorin Grigoras [www.stepofweb.com]", :name => "Author"}/
+    /[if lt IE 9]
+      <script type="text/javascript" src="assets/plugins/lt-ie9/html5.js"></script>
+      <script type="text/javascript" src="assets/plugins/lt-ie9/respond.min.js"></script>
+      <script type="text/javascript" src="assets/plugins/lt-ie9/excanvas.compiled.js"></script>
+    / GOOGLE FONTS
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Dosis:300,400", :rel => "stylesheet", :type => "text/css"}/
+    / CORE CSS FRAMEWORK
+    %link{:href => "assets/plugins/bootstrap/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/plugins/font-awesome/css/font-awesome.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/plugins/font-linecons/linecons.css", :rel => "stylesheet", :type => "text/css"}/
+    / PLUGINS
+    %link{:href => "assets/css/superslides.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/owl.carousel.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/plugins/magnific-popup/magnific-popup.css", :rel => "stylesheet", :type => "text/css"}/
+    / CSS TEMPLATE
+    %link{:href => "assets/css/reset.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/framework.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/typography.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/layout.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/blog.css", :rel => "stylesheet", :type => "text/css"}/
+    / colors : demo only
+    %link{:href => "assets/css/color/green.css", :rel => "stylesheet", :type => "text/css"}/
+    / default style : green
+    %link{:href => "assets/css/color/blue.css", :rel => "alternate stylesheet", :title => "blue", :type => "text/css"}/
+    %link{:href => "assets/css/color/orange.css", :rel => "alternate stylesheet", :title => "orange", :type => "text/css"}/
+    %link{:href => "assets/css/color/green.css", :rel => "alternate stylesheet", :title => "green", :type => "text/css"}/
+    %link{:href => "assets/css/color/red.css", :rel => "alternate stylesheet", :title => "red", :type => "text/css"}/
+    %link{:href => "assets/css/color/yellow.css", :rel => "alternate stylesheet", :title => "yellow", :type => "text/css"}/
+    %link{:href => "assets/css/color/gray.css", :rel => "alternate stylesheet", :title => "gray", :type => "text/css"}/
+    %link{:href => "assets/css/color/pink.css", :rel => "alternate stylesheet", :title => "pink", :type => "text/css"}/
+    %link{:href => "assets/css/color/mauve.css", :rel => "alternate stylesheet", :title => "mauve", :type => "text/css"}/
+    / ICONS
+    %link{:href => "assets/images/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "assets/images/favicon.ico", :rel => "icon", :type => "image/x-icon"}/
+    %link{:href => "assets/images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    / mobile settings
+    %meta{:content => "width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0", :name => "viewport"}/
+    / STYLESWITCHER
+    %link{:href => "assets/plugins/styleswitcher/styleswitcher.css", :rel => "stylesheet", :type => "text/css"}/
+    / Morenizr
+    %script{:src => "assets/plugins/modernizr.min.js", :type => "text/javascript"}
+  %body
+    / STYLESWITCHER
+    #switcher
+      .content-switcher
+        %h4 STYLE OPTIONS
+        %p Color Skin:
+        %ul{:style => "width:150px;"}
+          %li
+            %a.color{:href => "#", :onclick => "setActiveStyleSheet('blue'); return false;", :style => "background-color:#50657B"}
+          / default
+          %li
+            %a.color{:href => "#", :onclick => "setActiveStyleSheet('orange'); return false;", :style => "background-color:#F07057"}
+          %li
+            %a.color{:href => "#", :onclick => "setActiveStyleSheet('green'); return false;", :style => "background-color:#7E8344"}
+          %li
+            %a.color{:href => "#", :onclick => "setActiveStyleSheet('red'); return false;", :style => "background-color:#e93735"}
+          %li
+            %a.color{:href => "#", :onclick => "setActiveStyleSheet('pink'); return false;", :style => "background-color:#f73f69"}
+          %li
+            %a.color{:href => "#", :onclick => "setActiveStyleSheet('mauve'); return false;", :style => "background-color:#c91ac9"}
+          %li
+            %a.color{:href => "#", :onclick => "setActiveStyleSheet('yellow'); return false;", :style => "background-color:#f1c40f"}
+          %li
+            %a.color{:href => "#", :onclick => "setActiveStyleSheet('gray'); return false;", :style => "background-color:#333333"}
+        %p Home Page Template:
+        .styled-select
+          %select{:onchange => "window.document.location.href=this.options[this.selectedIndex].value;"}
+            %optgroup{:label => "+ Personal"}
+              %option{:value => "index-personal-full.html"} 01. Fullscreen Slider
+              %option{:value => "index-personal-half.html"} 02. Halfscreen Slider
+              %option{:value => "index-personal-half.html"} 03. Full Video
+            %optgroup{:label => "+ Agency"}
+              %option{:value => "index-agency-full.html"} 01. Fullscreen Slider
+              %option{:value => "index-agency-half.html"} 02. Halfscreen Slider
+              %option{:value => "index-agency-video.html"} 03. Full Video
+            %optgroup{:label => "+ Application"}
+              %option{:selected => "selected"} 01. Fullscreen Slider
+              %option{:value => "index-application-half.html"} 02. Halfscreen Slider
+              %option{:value => "index-application-video.html"} 03. Full Video
+            %optgroup{:label => "Misc"}
+              %option{:value => "countdown-image.html"} Count Down - Image
+              %option{:value => "countdown-video.html"} Count Down - Video
+              %option{:value => "index-video-full.html"} 404 Not Found
+              %option{:value => "faq.html"} Faq Page
+              %option{:value => "text-page.html"} Default Text Page
+        .switcher-links
+          %a{:href => "elements.html"} elements.html
+          %a{:href => "typography.html"} typography.html
+          %a{:href => "icons-fontawsome.html"} icons-fontawsome.html
+          %a{:href => "icons-linecons.html"} icons-linecons.html
+        #hideSwitcher ×
+    #showSwitcher
+      %i.fa.fa-tint
+    / /STYLESWITCHER
+    / HOME
+    %section#home.full-screen
+      / full-screen or half-screen (550px height)
+      #slider
+        / slider navigation
+        %nav.slides-navigation
+          %a.prev{:href => "#"}
+          %a.next{:href => "#"}
+        %ul.slides-container
+          / Item 1
+          %li
+            .image-caption
+              %hr/
+              %hr/
+              .inner
+                %h2.bigtext.strtoupper.nomargin ISIS ONE APP
+                %p NEW RELEASE AVAILABLE
+              %hr/
+              %hr/
+            / <span class="overlay"></span>
+            .fullscreen-img{:style => "background-image: url('assets/images/preview/slider/vision.jpg');"}
+          / Item 2
+          %li
+            .image-caption
+              %hr/
+              %hr/
+              .inner
+                %h1.bigtext.strtoupper.nomargin ONE PAGE DESIGN
+                %p THE TEMPLATE IS EASY TO SET UP
+              %hr/
+              %hr/
+            / <span class="overlay"></span>
+            .fullscreen-img{:style => "background-image: url('assets/images/preview/slider/background.jpg');"}
+    / /HOME
+    / Main Nav
+    %header#header
+      %nav.navbar.navbar-inverse{:role => "navigation"}
+        / add "wihite" class for white nav bar
+        .container
+          / Mobile Menu Button
+          %button#mobileMenu.fa.fa-bars{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          / Brand and toggle get grouped for better mobile display
+          .navbar-header
+            %a.navbar_brand.scrollTo{:href => "#home"}
+              %img{:alt => "", :height => "50", :src => "assets/images/logo/100x100/white.png", :width => "50"}/
+              /
+                Span class:
+                \- dark
+                \- white
+                \- styleColor (if you select "green" style color, the color will be green).
+                
+                You can combine them
+                Example:
+                <span class="white">ISIS</span><span class="styleColor">ONE</span>
+              %span ISIS ONE
+          / Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            / Fullscreen Button - Unavailable for IE
+            %a.btn-fullscreen{:href => "#"}
+              %i.fa.fa-external-link
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                %a.scrollTo{:href => "#home"} Home
+              %li
+                %a.scrollTo{:href => "#about"} About
+              %li
+                %a{:href => "blog.html"} Blog
+              %li
+                %a{:href => "faq.html"} FAQ
+              %li
+                %a.scrollTo{:href => "#contact"} Contact
+          / /.navbar-collapse
+    / /Main Nav
+    / RELEASED
+    %section#released
+      .container
+        .row
+          / left
+          .col-md-8
+            %header
+              %h1
+                %strong ISIS
+                RELEASED
+                %small V1.0
+              %p We'd like to change your vision about technology.
+            %article
+              /
+                CONTENT
+              %p Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. Andouille tongue corned beef rump pork loin shank meatball capicola turducken venison shankle kevin pancetta tri-tip boudin.
+              %p
+                Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. Andouille tongue corned beef rump pork loin shank meatball capicola turducken venison
+                %a{:href => "#"} shankle kevin pancetta
+                tri-tip boudin.
+              %span.spacer
+                / spacer 60px
+              /
+                APPSTORE / GPLAY
+                comming soon
+              %img{:alt => "", :height => "43", :src => "assets/images/icons/gplay.png", :width => "125"}/
+              %img{:alt => "", :height => "43", :src => "assets/images/icons/appstore.png", :width => "125"}/
+          / right
+          .col-md-4.nopadding.relative
+            /
+              IMAGE
+            %figure.animate_from_bottom.hidden-xs.top
+              %img.img-responsive{:alt => "", :height => "516", :src => "assets/images/preview/content/phone.png", :width => "358"}/
+    / /RELEASED
+    / FUTURE
+    %section.alternate.arrow-down
+      .container
+        %header.text-center
+          %h1
+            THE FUTURE IS
+            %strong BRIGHT
+          %p We can help you with your next project
+        .divider
+          / lines divider
+        %article
+          / LEFT CAROUSEL
+          .row
+            .col-md-6
+              /
+                MULTIPLE VIDEOS - CAROUSEL TYPE
+                If you ant a single video, delete this and add just a single line, example:
+                
+                <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" width="800" height="450" src="http://www.youtube.com/embed/-bdKMT1znJ0"></iframe>
+                </div>
+                
+                Also, you can add images, not only videos - you can mix them! Be sure that you add to images: class="img-responsive"
+              .mixed-carousel.owl-carousel.text-center{"data-autoplay" => "false", "data-navigation" => "false", "data-singleitem" => "true", "data-transition" => "false"}
+                .item.dragCursor.text-center
+                  / video
+                  .embed-responsive.embed-responsive-16by9
+                    %iframe.embed-responsive-item{:height => "450", :src => "https://player.vimeo.com/video/45253526?title=0&byline=0&portrait=0", :width => "800"}
+                .item.dragCursor.text-center
+                  / image
+                  %a.popup-image{:href => "assets/images/preview/slider/1.jpg"}
+                    %img.img-responsive{:alt => "", :src => "assets/images/preview/content/1_thumb.jpg"}/
+                .item.dragCursor.text-center
+                  / video
+                  .embed-responsive.embed-responsive-16by9
+                    %iframe.embed-responsive-item{:height => "450", :src => "http://www.youtube.com/embed/-bdKMT1znJ0", :width => "800"}
+              / /MULTIPLE VIDEOS - CAROUSEL TYPE
+            .col-md-6
+              %h3 The future has changed
+              / ARTICLE CONTENT
+              %p
+                This is a content carousel. You can add videos and images. If you want to mix images and videos, be sure that you add
+                %b img-responsive
+                class to all images. It's required for images.
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.
+              / /ARTICLE CONTENT
+          / /LEFT CAROUSEL
+        %hr/
+        / slim divider
+        %article
+          / RIGHT CAROUSEL
+          .row
+            .col-md-6
+              %h3 The past will remain the same
+              / ARTICLE CONTENT
+              %p
+                This is a content carousel. You can add videos and images. If you want to mix images and videos, be sure that you add
+                %b img-responsive
+                class to all images. It's required for images.
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.
+              / /ARTICLE CONTENT
+            .col-md-6
+              /
+                MULTIPLE VIDEOS - CAROUSEL TYPE
+                If you ant a single video, delete this and add just a single line, example: <iframe width="800" height="450" src="http://www.youtube.com/embed/-bdKMT1znJ0"></iframe>
+                Also, you can add images, not only videos - you can mix them! Be sure that you add to images: class="img-responsive"
+              .mixed-carousel.owl-carousel.text-center{"data-autoplay" => "false", "data-navigation" => "false", "data-singleitem" => "true", "data-transition" => "false"}
+                .item.dragCursor.text-center
+                  / image
+                  %a.popup-image{:href => "assets/images/preview/slider/3.jpg"}
+                    %img.img-responsive{:alt => "", :src => "assets/images/preview/content/3_thumb.jpg"}/
+                .item.dragCursor.text-center
+                  / image
+                  %a.popup-image{:href => "assets/images/preview/slider/2.jpg"}
+                    %img.img-responsive{:alt => "", :src => "assets/images/preview/content/2_thumb.jpg"}/
+              / /MULTIPLE VIDEOS - CAROUSEL TYPE
+          / /RIGHT CAROUSEL
+    / /FUTURE
+    / PRICE TABLE
+    %section
+      .container
+        %header.text-center
+          %h1 PACKAGES
+          %p Best prices on the market
+        .divider
+          / lines divider
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.
+        / FOUR COLUMNS
+        .row
+          .col-md-3.price-table
+            %h3 START
+            %p
+              $3.9
+              %span Per month
+            %ul
+              %li 12GB Bandwidth
+              %li 750 MB Storage
+              %li 03 Domains
+              %li Unlimited Subdomains
+              %li 10 Databases
+              %li Free Setup
+            %a.btn.btn-primary.btn-sm{:href => "#"} SIGN UP
+          .col-md-3.price-table.popular
+            %h3 PREMIUM
+            %p
+              $3.9
+              %span Per month
+            %ul
+              %li 12GB Bandwidth
+              %li 750 MB Storage
+              %li 03 Domains
+              %li Unlimited Subdomains
+              %li 10 Databases
+              %li Free Setup
+            %a.btn.btn-default.btn-sm{:href => "#"} SIGN UP
+          .col-md-3.price-table
+            %h3 PROFESSIONAL
+            %p
+              $3.9
+              %span Per month
+            %ul.pricetable-items
+              %li 12GB Bandwidth
+              %li 750 MB Storage
+              %li 03 Domains
+              %li Unlimited Subdomains
+              %li 10 Databases
+              %li Free Setup
+            %a.btn.btn-primary.btn-sm{:href => "#"} SIGN UP
+          .col-md-3.price-table
+            %h3 ULTIMATE
+            %p
+              $3.9
+              %span Per month
+            %ul
+              %li 12GB Bandwidth
+              %li 750 MB Storage
+              %li 03 Domains
+              %li Unlimited Subdomains
+              %li 10 Databases
+              %li Free Setup
+            %a.btn.btn-primary.btn-sm{:href => "#"} SIGN UP
+    / PRICE TABLE
+    / CALL NOW
+    %section.util-row
+      .container.text-center
+        %header{"data-animation" => "bounceIn"}
+          %h1.no-text-transform.italic Free support for our customers
+        %article.text-center
+          %h2 1-800-555-12345
+          %p
+            CALL US NOW - or -
+            %a.scrollTo{:href => "#contact"} MESSAGE US
+    / CALL NOW
+    / BLOG
+    %section#quick-blog.alternate
+      .container
+        %header.text-center
+          %h1 BLOG
+          %p RECENT ENTRIES
+        .divider
+          / lines divider
+        %article
+          .row.animate_fade_in
+            / article
+            .col-md-4.quick-hover
+              .quick-item
+                %figure.media-preview
+                  / image
+                  %img.img-responsive{:alt => "img", "data-src" => "holder.js/360x200/#676767:#555555/auto/", :src => "assets/images/1x1.png"}/
+                %h4 Simple but powerful
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.
+                %a.btn.btn-xs{:href => "blog-post.html"}
+                  %i.fa.fa-sign-out
+                  READ MORE
+            / article
+            .col-md-4.quick-hover
+              .quick-item
+                .media-preview
+                  / video
+                  %iframe{:height => "200", :src => "https://player.vimeo.com/video/24569304?title=0&byline=0&portrait=0", :width => "360"}
+                %h4 Easy to customize
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.
+                %a.btn.btn-xs{:href => "blog-post.html"}
+                  %i.fa.fa-sign-out
+                  READ MORE
+            / article
+            .col-md-4.quick-hover
+              .quick-item
+                .media-preview
+                  / audio
+                  %iframe.fullwidth{:height => "200", :src => "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/248496843&color=7E8344&auto_play=false&show_artwork=false"}
+                %h4 Easy to integrate
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.
+                %a.btn.btn-xs{:href => "blog-post.html"}
+                  %i.fa.fa-sign-out
+                  READ MORE
+        .divider
+          / lines divider
+        %article.text-center{"data-animation" => "bounceIn"}
+          %a.plusNav{:href => "blog.html", :title => "more from blog"} +
+    / /BLOG
+    / QUOTE
+    %section.cover{:style => "background-image:url('assets/images/preview/slider/3.jpg')"}
+      %span.overlay
+      .container.text-center{"data-animation" => "bounceIn"}
+        %q We can't solve problems by using the same kind of thinking we used when we created them.
+        %cite Albert Einstein
+    / /QUOTE
+    / ABOUT
+    %section#about
+      .container
+        %header.text-center
+          %h1 ABOUT ISIS ONE
+        .divider
+          / lines divider
+        %article.text-center.big-paragraph
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.
+        %article
+          .row.text-left
+            / Passion
+            .col-md-4
+              %h3 Passion
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.
+            / Precision
+            .col-md-4
+              %h3 Precision
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.
+            / Simplicity
+            .col-md-4
+              %h3 Simplicity
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.
+        / curriculum vitae button
+        /
+          <article class="curriculum-vitae text-center">
+          <a href="#" class="plusNav">+</a>
+          <p>curriculum vitae</p>
+          </article>
+    / /ABOUT
+    / CONTACT
+    %section#contact.alternate.arrow-down
+      .container
+        %header.text-center
+          %h1 CONTACT
+        .divider
+          / lines divider
+        %article
+          %p.text-center.big-paragraph
+            Drop us a line or just say
+            %strong
+              %em Hello!
+            %small.fsize15.block
+              Lorem ipsum dolor sit amet,
+              %strong consectetur adipiscing
+              elit.
+              %br/
+              Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.
+        %article
+          / Alert
+          #_sent_ok_.alert.alert-success.fade.in.fsize16.hide
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+            %span#_msg_txt_
+              %strong Thank You!
+              Your message successfully sent!
+          / Form
+          %form#contactForm.white.block.form-inline{:action => "php/contact.php", :method => "post"}
+            .row
+              .col-md-4
+                %input#contact_name.fullwidth{:name => "contact_name", :placeholder => "NAME *", :required => "", :title => "Name", :type => "text", :value => ""}/
+              .col-md-4
+                %input#contact_email.fullwidth{:name => "contact_email", :placeholder => "EMAIL *", :required => "", :title => "Email", :type => "email", :value => ""}/
+              .col-md-4
+                %input#contact_subject.fullwidth{:name => "contact_subject", :placeholder => "SUBJECT", :title => "subject", :type => "text", :value => ""}/
+            .row
+              .col-md-12
+                %textarea#contact_comment.fullwidth{:name => "contact_comment", :placeholder => "MESSAGE *", :required => "", :rows => "5"}
+              .col-md-12
+                %input#captcha{:name => "captcha", :type => "hidden", :value => ""}/
+                / hidden field - humans should not see it, only spam bots will see it
+                %button#contact_submit.btn.btn-default SEND MESSAGE
+    / /CONTACT
+    / FOOTER
+    %footer
+      / SCROOL TO TOP
+      %a.fa.fa-arrow-up.toTop{:href => "#toTop"}
+      .container
+        .row
+          .col-md-6.copyright
+            Your Company, LTD
+            %br/
+            2014 © All Rights Reserved.
+          .col-md-6.text-right
+            %a.social.fa.fa-facebook{:href => "#"}
+            %a.social.fa.fa-twitter{:href => "#"}
+            %a.social.fa.fa-google-plus{:href => "#"}
+    / /FOOTER
+    / CORE FILES
+    %script{:src => "assets/plugins/jquery/jquery-2.2.3.min.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/bootstrap/js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/jquery.isotope.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/masonry.js", :type => "text/javascript"}
+    / PLUGINS
+    %script{:src => "assets/plugins/jquery-appear/jquery.appear.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/superslides/dist/jquery.superslides.min.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/jquery-owl-carousel/owl.carousel.min.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/carouFredSel/jquery.carouFredSel-6.2.1-packed.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/jquery-countTo/jquery.countTo.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/magnific-popup/jquery.magnific-popup.min.js", :type => "text/javascript"}
+    %script{:src => "assets/plugins/jquery.mb.YTPlayer.js", :type => "text/javascript"}
+    / Youtube video background
+    %script{:src => "assets/plugins/holder.js", :type => "text/javascript"}
+    / delete on production
+    / js scripts
+    %script{:async => "", :src => "assets/js/scripts.js", :type => "text/javascript"}
+    %script{:async => "", :src => "assets/plugins/styleswitcher/styleswitcher.js", :type => "text/javascript"}
+    / Change UA-XXXXX-X with your site ID
+    /
+      <script>
+      window._gaq = [['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+      Modernizr.load({load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'});
+      </script>
