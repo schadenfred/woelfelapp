@@ -50,6 +50,18 @@ group :development, :test do
   gem 'guard'
   gem 'guard-minitest'
   gem 'guard-livereload'
+
+  # engines
+  gem 'galleriable', github: 'schadenfred/galleriable'#, require: false
+  # gem 'galleriable', path: '~/work/opensource/engines/galleriable/galleriable'
+  gem 'optimizable', github: 'schadenfred/optimizable'#, require: false
+  # gem 'optimizable', path: '~/work/opensource/engines/optimizable/optimizable'
+  gem 'bloggable', github: 'schadenfred/bloggable'#, require: false
+  # gem 'bloggable', path: '~/work/opensource/engines/bloggable/bloggable'
+  # gem 'buttafly', github: 'schadenfred/buttafly/'#, require: false
+  gem 'buttafly', path: '~/work/opensource/engines/buttafly/buttafly'
+
+
 end
 
 group :development do

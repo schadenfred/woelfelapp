@@ -4,9 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :articles, as: :author, class_name: "Bloggable::Article"
   has_many :addresses, as: :addressable
   has_many :practice_areas
   has_many :practice_areas_users
   has_many :practice_locales_users
   has_many :practice_locales, through: :practice_locales_users
+
 end

@@ -27,7 +27,7 @@ describe User do
 
       must_have_index(:email)
     end
-  # end
+  end
 
   specify "associations" do
 
@@ -36,43 +36,6 @@ describe User do
     must_have_many(:practice_areas)
     must_have_many(:practice_locales_users)
     must_have_many(:practice_locales)
-  end
-
-  # describe "accepts_nested_attributes" do
-
-  #   Given(:user_attrs) { FactoryGirl.attributes_for(:user) }
-  #   Given(:vehicle) { FactoryGirl.create(:vehicle) }
-  #   Given(:ownership_attrs) { FactoryGirl.attributes_for(:ownership ) }
-  #   Given(:vehicle_attrs) { FactoryGirl.attributes_for(:vehicle)}
-
-  #   describe "create user" do
-
-  #     Given(:attrs) { user_attrs }
-
-  #     Then { assert_difference("User.count") { User.create(attrs) } }
-  #   end
-
-  #   describe "create nested ownerships" do
-
-  #     Given(:attrs) { user_attrs.merge(ownerships_attributes: [
-  #       ownership_attrs.merge(vehicle_id: vehicle.id)])}
-
-  #     Then do
-  #       assert_difference(["User.count", "Ownership.count"]) do
-  #         user = User.create(attrs)
-  #       end
-  #     end
-  #   end
-
-  #   describe "create nested vehicle" do
-
-  #     Given(:attrs) { user_attrs.merge( ownerships_attributes: [
-  #       ownership_attrs.merge(
-  #             vehicle_attributes: FactoryGirl.attributes_for(:vehicle) ) ] ) }
-
-  #     Then { assert_difference( [
-  #       "User.count", "Ownership.count", "Vehicle.count"]) {
-  #         user = User.create(attrs) } }
-  #   end
+    must_have_many(:articles)
   end
 end
